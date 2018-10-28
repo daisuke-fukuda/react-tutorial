@@ -98,9 +98,18 @@ class Game extends React.Component {
         desc += '(' + location.col + ', ' + location.row + ')';
       }
 
+      // Bold the currently selected item in the move list.
+      let className = 'move-button';
+      if (this.state.stepNumber === move) {
+        className += ' move-button-current';
+      }
+
       return (
         <li key={move}>
-          <button onClick={() => this.jumpTo(move)}>{desc}</button>
+          <button
+            className={className}
+            onClick={() => this.jumpTo(move)}
+          >{desc}</button>
         </li>
       );
     });

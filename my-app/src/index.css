@@ -48,3 +48,11 @@ ol, ul {
 .game-info {
     margin-left: 20px;
 }
+
+.move-button {
+
+}
+
+.move-button-current {
+    font-weight: bold;
+}
